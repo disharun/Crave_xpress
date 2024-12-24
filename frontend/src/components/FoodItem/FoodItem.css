@@ -1,0 +1,120 @@
+/* Food Item Container */
+.food-item {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Section */
+.food-item-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.food-item-image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border-bottom: 2px solid #e6e6e6;
+  transition: transform 0.3s ease;
+}
+
+/* Add/Remove Buttons */
+.add-to-cart-btn,
+.food-item-counter button {
+  background: #ff6b6b;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover,
+.food-item-counter button:hover {
+  background: #e63946;
+}
+
+.food-item-counter {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.remove-btn,
+.add-btn {
+  width: 30px;
+  height: 30px;
+}
+
+.counter-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Info Section */
+.food-item-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.food-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+.food-item-desc {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.food-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-item-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff4c24;
+}
+
+.rating-stars {
+  height: 20px;
+  object-fit: cover;
+}

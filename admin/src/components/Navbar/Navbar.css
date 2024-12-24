@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 6%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .logo {
+  width: 120px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.navbar .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar .profile:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 5%;
+  }
+
+  .navbar .logo {
+    width: 100px;
+  }
+
+  .navbar .profile {
+    width: 35px;
+    height: 35px;
+  }
+}
