@@ -14,6 +14,9 @@
   margin-top: 30px;
 }
 
+.my-orders h2 {
+  color: #000;
+}
 .my-orders-order {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr 2fr 1fr;

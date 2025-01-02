@@ -4,9 +4,10 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../../assets/d.png) center/cover no-repeat;
   position: relative;
-  border-radius: 20px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  margin-bottom: 45px;
+  margin-top: 45px;
 }
 
 .header-contents {
@@ -89,5 +90,69 @@
   }
   .header-contents button {
     padding: 3vw 6vw;
+  }
+}
+/* Existing CSS remains unchanged */
+
+/* Responsive adjustments for tablets */
+@media (max-width: 1024px) {
+  .header {
+    height: 38vw; /* Slightly taller header for tablets */
+  }
+  .header-contents {
+    max-width: 70%; /* More compact content */
+    left: 5vw; /* Adjusted padding */
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .header {
+    height: 50vw; /* Increase height for better visibility */
+  }
+  .header-contents {
+    max-width: 85%; /* Center align for smaller screens */
+    text-align: center;
+    align-items: center;
+    left: 0;
+    bottom: 15%; /* Slightly higher content */
+  }
+  .header-contents p {
+    display: none; /* Hide paragraph text on small devices */
+  }
+  .header-contents button {
+    padding: 3vw 6vw; /* Adjust button size */
+  }
+}
+
+/* Responsive adjustments for extra-small mobile devices */
+@media (max-width: 480px) {
+  .header {
+    height: 60vw; /* Full height for extra-small screens */
+  }
+  .header-contents {
+    max-width: 90%; /* Maximize width usage */
+    gap: 2vw; /* Reduced spacing between items */
+  }
+  .header-contents h2 {
+    font-size: clamp(18px, 5vw, 36px); /* Smaller heading size */
+  }
+  .header-contents button {
+    padding: 4vw 8vw; /* Smaller buttons */
+    font-size: clamp(12px, 4vw, 14px); /* Adjust font size */
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  .header {
+    height: 40vw; /* Maintain proportion in landscape */
+  }
+  .header-contents {
+    max-width: 80%; /* Adjust content width */
+    gap: 1vw; /* Reduce gap */
+  }
+  .header-contents button {
+    padding: 2vw 5vw; /* Compact buttons */
   }
 }

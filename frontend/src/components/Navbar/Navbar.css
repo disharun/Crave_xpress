@@ -3,11 +3,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: whitesmoke;
+  width: 100%;
 }
 
 .navbar .logo {
-  width: 100px;
-  border-radius: 200px;
+  margin-left: 100px;
+  width: 80px;
+  border-radius: 100%;
+  border: 1px white;
 }
 
 .navbar-menu {
@@ -17,16 +21,21 @@
 }
 
 .navbar-menu a {
-  color: whitesmoke;
+  color: black;
   font-size: 20px;
   border: 2px solid #ff4c24;
-  border-radius: 20px;
+  border-radius: 0;
   padding: 10px 20px;
 }
 
 .navbar-menu .active {
   padding-bottom: 2px;
-  border-bottom: 2px solid #49557e;
+  border-bottom: 2px solid black;
+}
+.navbar-menu a:hover {
+  background: linear-gradient(90deg, #ff4c24, #ff4c24);
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 122, 24, 0.5);
 }
 
 .navbar-right {
@@ -63,11 +72,12 @@
 }
 
 .navbar-right button:hover {
-  background: #fff4f2;
+  background: linear-gradient(90deg, #ff4c24, #ff4c24);
 }
 
 .navbar-profile {
   position: relative;
+  margin-right: 50px;
 }
 .navbar-profile-dropdown {
   position: absolute;
