@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,11 +10,25 @@ import image2 from "../../assets/png-tree.jpg";
 import image3 from "../../assets/rustic-bowl.jpg";
 
 const Header = () => {
+  const [text, setText] = useState("Order Now");  // Default text
   const menu = useRef(null);
 
-  const scrollToMenu = () => {
-    menu.current.scrollIntoView({ behavior: "smooth" });
-  };
+  // Function to change text every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setText((prevText) => {
+        if (prevText === "Order Now") {
+          return "Fresh & Delicious! ";
+        } else if (prevText === "Fresh & Delicious!") {
+          return "Satisfy Your Hunger !";
+        } else {
+          return "Order Now !";
+        }
+      });
+    }, 2000); // Slow change every 4 seconds
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
 
   const sliderSettings = {
     dots: true,
@@ -43,8 +57,7 @@ const Header = () => {
         ))}
       </Slider>
       <div className="header-contents">
-        <h2>Order Now</h2>
-        <button onClick={scrollToMenu}>View Menu</button>
+        <h2 className="fade-text">{text}</h2>
       </div>
       <div ref={menu} />
     </div>
