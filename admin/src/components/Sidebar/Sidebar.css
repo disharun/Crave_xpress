@@ -2,7 +2,7 @@
   width: 20%;
   min-height: 100vh;
   background-color: #f8f8f8;
-  border-right: 1.5px solid #e0e0e0;
+  border-right: 1.5px solid black;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px 0;
   transition: width 0.3s ease;

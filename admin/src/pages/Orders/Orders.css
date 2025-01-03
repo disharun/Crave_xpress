@@ -12,6 +12,9 @@
   color: #505050;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+h3 {
+  color: #333;
+}
 
 .order-item:hover {
   transform: scale(1.02);

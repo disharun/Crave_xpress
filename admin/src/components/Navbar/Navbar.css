@@ -3,10 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 6%;
-  background-color: #ffffff;
+  background-color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
   transition: box-shadow 0.3s ease-in-out;
+  border: 1px solid black;
 }
 
 .navbar:hover {
@@ -15,7 +15,6 @@
 
 .navbar .logo {
   width: 120px;
-  border-radius: 100px;
   object-fit: cover;
 }
 
