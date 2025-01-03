@@ -10,10 +10,16 @@ import MyOrders from './pages/MyOrders/MyOrders'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify/Verify'
+import FoodDetail from './components/FoodDetail/FoodDetail'
 
 const App = () => {
 
   const [showLogin,setShowLogin] = useState(false);
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (foodItem) => {
+    setCart((prevCart) => [...prevCart, foodItem]);
+  };
 
   return (
     <>
@@ -23,7 +29,8 @@ const App = () => {
         <Navbar setShowLogin={setShowLogin}/>
         <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='/cart' element={<Cart />}/>
+          <Route path='/food/:foodId' element={<FoodDetail addToCart={addToCart} />} />
+          <Route path='/cart' element={<Cart cart={cart}/>}/>
           <Route path='/order' element={<PlaceOrder />}/>
           <Route path='/myorders' element={<MyOrders />}/>
           <Route path='/verify' element={<Verify />}/>

@@ -1,10 +1,9 @@
 .header {
   height: 34vw;
   margin: 30px auto;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    center/cover no-repeat;
+  background: center/cover no-repeat;
   position: relative;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+
   overflow: hidden;
   margin-bottom: 45px;
   margin-top: 45px;
@@ -14,12 +13,16 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  text-align: center;
   gap: 2vw;
   max-width: 60%;
-  bottom: 12%;
-  left: 8vw;
+  bottom: 50%;
+  transform: translateX(-50%);
+  left: 50%;
+  transition: all 0.5s ease-in-out;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji";
 }
+
 .slider-item {
   width: 100%;
   height: 100%;
@@ -32,11 +35,16 @@
 }
 
 .header-contents h2 {
-  margin-bottom: 100px;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 900;
   color: #fff;
-  font-size: clamp(22px, 4.5vw, 48px);
-  letter-spacing: 1px;
+  margin: 0;
+  opacity: 0;
+  animation: fadeInOut 8s infinite;
+  background: white;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Arial", sans-serif;
 }
 
 .header-contents p {
@@ -50,7 +58,7 @@
   color: white;
   font-weight: 600;
   padding: 1.2vw 3vw;
-  background: linear-gradient(135deg, #ff7a18, #af002d);
+  background: linear-gradient(135deg, #060504, #f37393);
   font-size: clamp(13px, 1vw, 16px);
   border-radius: 50px;
   cursor: pointer;
@@ -60,6 +68,27 @@
 .header-contents button:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 15px rgba(255, 122, 24, 0.5);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes zoomInOut {
@@ -100,67 +129,62 @@
     padding: 3vw 6vw;
   }
 }
-/* Existing CSS remains unchanged */
 
-/* Responsive adjustments for tablets */
 @media (max-width: 1024px) {
   .header {
-    height: 38vw; /* Slightly taller header for tablets */
+    height: 38vw;
   }
   .header-contents {
-    max-width: 70%; /* More compact content */
-    left: 5vw; /* Adjusted padding */
+    max-width: 70%;
+    left: 5vw;
   }
 }
 
-/* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
   .header {
-    height: 50vw; /* Increase height for better visibility */
+    height: 50vw;
   }
   .header-contents {
-    max-width: 85%; /* Center align for smaller screens */
+    max-width: 85%;
     text-align: center;
     align-items: center;
     left: 0;
-    bottom: 15%; /* Slightly higher content */
+    bottom: 15%;
   }
   .header-contents p {
-    display: none; /* Hide paragraph text on small devices */
+    display: none;
   }
   .header-contents button {
-    padding: 3vw 6vw; /* Adjust button size */
+    padding: 3vw 6vw;
   }
 }
 
-/* Responsive adjustments for extra-small mobile devices */
 @media (max-width: 480px) {
   .header {
-    height: 60vw; /* Full height for extra-small screens */
+    height: 60vw;
   }
   .header-contents {
-    max-width: 90%; /* Maximize width usage */
-    gap: 2vw; /* Reduced spacing between items */
+    max-width: 90%;
+    gap: 2vw;
   }
   .header-contents h2 {
-    font-size: clamp(18px, 5vw, 36px); /* Smaller heading size */
+    font-size: clamp(18px, 5vw, 36px);
   }
   .header-contents button {
-    padding: 4vw 8vw; /* Smaller buttons */
-    font-size: clamp(12px, 4vw, 14px); /* Adjust font size */
+    padding: 4vw 8vw;
+    font-size: clamp(12px, 4vw, 14px);
   }
 }
 
-/* Landscape orientation adjustments */
 @media (orientation: landscape) and (max-height: 500px) {
   .header {
-    height: 40vw; /* Maintain proportion in landscape */
+    height: 40vw;
   }
   .header-contents {
-    max-width: 80%; /* Adjust content width */
-    gap: 1vw; /* Reduce gap */
+    max-width: 80%;
+    gap: 1vw;
   }
   .header-contents button {
-    padding: 2vw 5vw; /* Compact buttons */
+    padding: 2vw 5vw;
   }
 }
