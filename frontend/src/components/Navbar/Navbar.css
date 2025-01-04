@@ -1,34 +1,44 @@
 /* Navbar styling */
 .navbar {
-  padding: 20px 30px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #1f1f1f;
+  color: #fff; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
+  border-radius: 8px;
 }
 
 /* Logo styling */
 .navbar .logo {
-  margin-left: 100px;
-  width: 124px;
-  border: 1px white;
-  height: 50px;
+  margin-left: 30px;
+  width: 160px;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
 }
 
 /* Menu styling */
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 30px;
 }
 
 .navbar-menu a {
-  color: #333;
+  color: #fff; /* White color for text */
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 12px 25px;
+  border-radius: 25px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -37,14 +47,14 @@
 .navbar-menu .active {
   background-color: #ff4c24;
   color: #fff;
-  box-shadow: 0 6px 15px rgba(255, 76, 36, 0.2);
+  box-shadow: 0 6px 20px rgba(255, 76, 36, 0.3);
 }
 
 /* Navbar right section */
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 /* Navbar left section (search bar placement) */
@@ -93,23 +103,6 @@
   }
 }
 
-/* Sign-in button */
-.navbar-right button {
-  background-color: transparent;
-  font-size: 16px;
-  color: #ff4c24;
-  border: 2px solid #ff4c24;
-  padding: 10px 20px;
-  border-radius: 30px;
-  transition: all 0.3s ease-in-out;
-}
-
-.navbar-right button:hover {
-  background-color: #ff4c24;
-  color: #fff;
-  box-shadow: 0 6px 15px rgba(255, 76, 36, 0.3);
-}
-
 /* Profile dropdown */
 .navbar-profile {
   position: relative;
@@ -121,8 +114,8 @@
   right: 0;
   display: none;
   flex-direction: column;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   padding: 10px;
 }
@@ -135,15 +128,40 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px;
-  border-radius: 4px;
+  padding: 10px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .navbar-profile-dropdown li:hover {
   background-color: #ff4c24;
+  color: #000;
+}
+
+/* Greeting animation */
+.greeting {
+  display: inline-block;
+  font-size: 18px;
   color: #fff;
+  margin-right: 20px;
+  animation: squeeze-in 1s ease-out;
+}
+
+.greeting-text {
+  font-weight: bold;
+}
+
+@keyframes squeeze-in {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1.1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 /* Search modal and input field */
@@ -183,7 +201,6 @@
   outline: none;
   box-sizing: border-box;
   margin-bottom: 10px;
-
   transition: border-color 0.3s ease;
 }
 
@@ -197,7 +214,6 @@
   position: absolute;
   top: calc(100% + 1px);
   width: 90%;
-
   max-height: 300px;
   overflow-y: auto;
   background-color: black;
@@ -219,7 +235,7 @@
   padding: 12px;
   cursor: pointer;
   border-radius: 10px;
-  background-color: #000000;
+  background-color: #222222;
   color: white;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -282,7 +298,7 @@
   font-size: 16px;
   font-style: italic;
   border-radius: 10px;
-  background-color: black;
+  background-color: #333;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -307,17 +323,6 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-.price {
-  font-weight: bold;
-  color: #ff4c24;
-}
-
-.no-results {
-  padding: 10px;
-  text-align: center;
-  color: #777;
 }
 
 /* Backdrop */
@@ -350,30 +355,5 @@
   .navbar-left {
     justify-content: flex-start;
     gap: 15px;
-  }
-}
-
-/* Greeting animation */
-.greeting {
-  display: inline-block;
-  font-size: 18px;
-  color: #333;
-  margin-right: 20px;
-  animation: squeeze-in 1s ease-out;
-}
-
-.greeting-text {
-  font-weight: bold;
-}
-
-@keyframes squeeze-in {
-  0% {
-    transform: scaleX(0);
-  }
-  50% {
-    transform: scaleX(1.1);
-  }
-  100% {
-    transform: scaleX(1);
   }
 }

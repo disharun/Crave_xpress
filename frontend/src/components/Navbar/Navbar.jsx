@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
+import logo from "../../assets/logo-nav.png";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreContext";
 import axios from "axios";
@@ -57,7 +58,7 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className="navbar">
       <Link to="/">
-        <img className="logo" src={assets.logo} alt="Logo" />
+        <img className="logo" src={logo} alt="Logo" />
       </Link>
       <ul className="navbar-menu">
         <Link
