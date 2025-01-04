@@ -193,7 +193,6 @@
 }
 
 /* Search results styling */
-/* Styling for search result container */
 .search-results {
   position: absolute;
   top: calc(100% + 1px);
