@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Header.css";
 
 // Import local images
-import image1 from "../../assets/ai-food.jpg";
-import image2 from "../../assets/png-tree.jpg";
-import image3 from "../../assets/rustic-bowl.jpg";
+import image1 from "../../assets/rustic-bowl.jpg";
+import image2 from "../../assets/d.png";
+
 
 const Header = () => {
   const [text, setText] = useState("Order Now");  // Default text
@@ -25,7 +25,7 @@ const Header = () => {
           return "Order Now !";
         }
       });
-    }, 2000); // Slow change every 4 seconds
+    }, 1000); // Slow change every 4 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
@@ -41,7 +41,7 @@ const Header = () => {
     arrows: false,
   };
 
-  const images = [image1, image2, image3];
+  const images = [image1, image2];
 
   return (
     <div className="header">
