@@ -11,13 +11,16 @@ const Navbar = ({ setShowLogin }) => {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const { getTotalCartAmount, token, setToken, userName } = useContext(StoreContext); // Assuming userName is set in StoreContext
+  const { getTotalCartAmount, token, setToken, userName } =
+    useContext(StoreContext); // Assuming userName is set in StoreContext
   const navigate = useNavigate();
   const url = "http://localhost:4000";
   const [imageUrl, setImageUrl] = useState("");
 
   const debounceTimeout = useRef(null);
-  const imageUr = imageUrl.image ? `http://localhost:4000/images/${imageUrl.image}` : assets.defaultImage;
+  const imageUr = imageUrl.image
+    ? `http://localhost:4000/images/${imageUrl.image}`
+    : assets.defaultImage;
 
   const logout = () => {
     localStorage.removeItem("token");
@@ -73,21 +76,21 @@ const Navbar = ({ setShowLogin }) => {
           onClick={() => setMenu("menu")}
           className={menu === "menu" ? "active" : ""}
         >
-          Menu
+          Food
         </a>
         <a
           href="#app-download"
           onClick={() => setMenu("mob-app")}
           className={menu === "mob-app" ? "active" : ""}
         >
-          Mobile App
+          Tracking
         </a>
         <a
           href="#footer"
           onClick={() => setMenu("contact")}
           className={menu === "contact" ? "active" : ""}
         >
-          Contact Us
+          About Us
         </a>
       </ul>
       <div className="navbar-right">
