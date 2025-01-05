@@ -21,6 +21,7 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
+  color: white;
 }
 
 .add-img-upload img {
@@ -28,6 +29,8 @@
   border-radius: 8px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+  background-color: #121212;
+  
 }
 
 .add-img-upload img:hover {
@@ -38,6 +41,7 @@
 .add-product-description {
   width: max(40%, 280px);
   margin: 0 auto;
+  color: white;
 }
 
 .add-product-name input,
@@ -45,10 +49,11 @@
   width: 100%;
   padding: 12px;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   border-radius: 4px;
   outline-color: #ff7043;
   transition: border 0.3s ease-in-out;
+  background-color: #121212;
 }
 
 .add-product-name input:focus,
@@ -60,6 +65,7 @@
   display: flex;
   gap: 30px;
   justify-content: center;
+  color: white;
 }
 
 .add-category-price select,
@@ -71,6 +77,8 @@
   border-radius: 4px;
   outline-color: tomato;
   transition: border-color 0.3s ease-in-out;
+  background-color: #121212;
+  color: white;
 }
 
 .add-category-price select:focus,

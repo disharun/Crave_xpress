@@ -1,7 +1,7 @@
 .sidebar {
   width: 20%;
   min-height: 100vh;
-  background-color: #f8f8f8;
+  background-color: #121212;
   border-right: 1.5px solid black;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px 0;
@@ -24,7 +24,8 @@
   align-items: center;
   gap: 15px;
   padding: 12px 15px;
-  background-color: #ffffff;
+  background-color: #121212;
+  color: white;
   border-radius: 5px;
   cursor: pointer;
   border: 1px solid #dcdcdc;
@@ -37,7 +38,7 @@
 }
 
 .sidebar-option.active {
-  background-color: #fff0ed;
+  background-color: black;
   border-color: tomato;
 }
 
@@ -53,13 +54,13 @@
 
 .sidebar-option p {
   font-size: 14px;
-  color: #333;
+  color: white;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition:  0.3s ease;
 }
 
 .sidebar-option:hover p {
-  color: #ff7043;
+  color: black;
 }
 
 @media (max-width: 900px) {
